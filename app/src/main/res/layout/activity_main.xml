@@ -11,8 +11,8 @@
     tools:context=".MainActivity">
 
     <FrameLayout
-        android:layout_width="300dp"
-        android:layout_height="300dp">
+        android:layout_width="380dp"
+        android:layout_height="380dp">
 
         <ProgressBar
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
@@ -30,13 +30,35 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingEnd="8dp"
+            tools:ignore="RtlSymmetry">
             <TextView
+                android:id="@+id/tv_hours"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/_00"
+                android:layout_gravity="center"
+                android:textSize="48sp"
+                android:textColor="@color/cyan"
+                android:layout_marginEnd="4dp"
+                tools:ignore="Suspicious0dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/colon"
+                android:layout_gravity="center"
+                android:textSize="48sp"
+                android:textColor="@color/cyan"
+                android:layout_marginEnd="4dp"
+                tools:ignore="Suspicious0dp" />
+            <TextView
+                android:id="@+id/tv_minutes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_00"
                 android:layout_gravity="center"
-                android:textSize="40sp"
+                android:textSize="48sp"
                 android:textColor="@color/cyan"
                 android:layout_marginEnd="4dp"/>
             <TextView
@@ -44,42 +66,56 @@
                 android:layout_height="wrap_content"
                 android:text="@string/colon"
                 android:layout_gravity="center"
-                android:textSize="40sp"
+                android:textSize="48sp"
                 android:textColor="@color/cyan"
                 android:layout_marginEnd="4dp"/>
             <TextView
+                android:id="@+id/tv_seconds"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_00"
                 android:layout_gravity="center"
-                android:textSize="40sp"
-                android:textColor="@color/cyan"
-                android:layout_marginEnd="4dp"/>
+                android:textSize="48sp"
+                android:textColor="@color/cyan"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/colon"
                 android:layout_gravity="center"
-                android:textSize="40sp"
+                android:textSize="48sp"
                 android:textColor="@color/cyan"
                 android:layout_marginEnd="4dp"/>
             <TextView
+                android:id="@+id/tv_milliseconds"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_00"
                 android:layout_gravity="center"
-                android:textSize="40sp"
+                android:textSize="48sp"
                 android:textColor="@color/cyan"/>
         </LinearLayout>
     </FrameLayout>
-    <Button
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/material_dynamic_primary50"
-        android:text="@string/start"
-        android:textSize="16sp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:paddingHorizontal="24dp" />
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp">
+
+        <ImageButton
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="#00FF"
+            android:src="@drawable/btn_background_reset"/>
+        <ImageButton
+            android:id="@+id/btn_playPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="#00FF"
+            android:src="@drawable/btn_background"/>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -5,4 +5,5 @@
     <color name="cyan">#00ffff</color>
     <color name="blue">#0000ff</color>
     <color name="darkBlue">#00008b</color>
+    <color name="btnColor">#03DAC6</color>
 </resources>
